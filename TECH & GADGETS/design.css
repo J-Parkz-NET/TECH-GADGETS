@@ -1,0 +1,303 @@
+/* styles.css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden-section {
+  display: none;
+}
+
+.page {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+form {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilos botón Buscar */
+button[type="submit"] {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.section {
+  min-width: 100vw;
+  scroll-snap-align: start;
+  padding: 50px;
+}
+
+/* Estilos generales */
+body {
+    font-family: Georgia, 'Times New Roman';
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Cambia el color de fondo a negro */
+    color: #fff; /* Cambia el color del texto a blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos esta línea para la sombra */
+  }
+  
+/* Estilos de la barra de navegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
+  display: flex; /* Agregamos esta línea */
+}
+
+nav ul li {
+  /* display: inline; */ /* Comenta o elimina esta línea */
+  display: flex; /* Agregamos esta línea */
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+  
+  /* Estilos de la sección destacada */
+  .hero {
+    background-image: url('tech-1.jpg');
+    background-size: auto;
+    background-position: center;
+    text-align: center;
+    padding: 150px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos esta línea para la sombra */
+  }
+  
+  .hero h1 {
+    color: hsl(283, 100%, 50%);
+    font-size: 36px;
+    margin-bottom: 20px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    box-shadow: 0 0 10px rgb(88, 0, 77);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos esta línea para la sombra */
+  }
+
+   /* Estilos para la sección de inicio */
+   #inicio {
+    background-color: #000000;
+    padding: 20px;
+    }
+  
+    #inicio h2 {
+    font-size: 24px;
+    color: #858585;
+    }
+  
+    #inicio article {
+    margin-bottom: 20px;
+    }
+  
+    #inicio article h3 {
+    font-size: 18px;
+    color: #666;
+    }
+  
+    #inicio article p {
+    font-size: 14px;
+    color: #999;
+    }
+  
+  /* Estilos para la sección de noticias */
+  #noticias {
+  background-color: #6d6d6d;
+  padding: 20px;
+  }
+
+  #noticias h2 {
+  font-size: 24px;
+  color: #e7e7e7;
+  }
+
+  #noticias article {
+  margin-bottom: 20px;
+  }
+
+  #noticias article h3 {
+  font-size: 18px;
+  color: #b9b9b9;
+  }
+
+  #noticias article p {
+  font-size: 14px;
+  color: #999;
+  }
+
+   /* Estilos para la sección de reseñas */
+   #reseñas {
+    background-color: #000000;
+    padding: 20px;
+    }
+  
+    #reseñas h2 {
+    font-size: 24px;
+    color: #9b9b9b;
+    }
+  
+    #reseñas article {
+    margin-bottom: 20px;
+    }
+  
+    #reseñas article h3 {
+    font-size: 18px;
+    color: #ffffff;
+    }
+  
+    #reseñas article p {
+    font-size: 14px;
+    color: #f3f3f3;
+    }
+
+    /* Estilos para la sección de comparativas */
+  #comparativas {
+    background-color: #6d6d6d;
+    padding: 20px;
+    }
+  
+    #comparativas h2 {
+    font-size: 24px;
+    color: #e7e7e7;
+    }
+  
+    #comparativas article {
+    margin-bottom: 20px;
+    }
+  
+    #comparativas article h3 {
+    font-size: 18px;
+    color: #b9b9b9;
+    }
+  
+    #comparativas article p {
+    font-size: 14px;
+    color: #999;
+    }
+
+  /* Estilos de la sección de productos destacados */
+  .featured-products {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px; /* Ajuste del margen izquierdo */
+  }
+
+  .featured-products h2 {
+    display: flex;
+    position: relative;
+    padding: 25px;
+  }
+
+  .product {
+    flex: 0 0 auto;
+    text-align: center;
+    margin-right: 20px; /* Espaciado entre los productos */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos esta línea para la sombra */
+  }
+  
+  .product img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 10px; /* Ajuste del margen superior */
+    margin-right: 0; /* Sin espaciado en el último producto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos esta línea para la sombra */
+  }
+  
+  .product h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 10px; /* Ajuste del margen superior */
+    margin-right: 0; /* Sin espaciado en el último producto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos esta línea para la sombra */
+  }
+  
+  .product p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px; /* Ajuste del margen superior */
+    margin-right: 0; /* Sin espaciado en el último producto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos esta línea para la sombra */
+  }
+  
+  .product a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin-top: 10px; /* Ajuste del margen superior */
+    margin-right: 0; /* Sin espaciado en el último producto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos esta línea para la sombra */
+  }
+
+  /* Estilos del botón Explorar - Ver detalles. */
+  .btn {
+  font: Georgia 5px "Times New Roman",;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+
+  /* Estilos del botón Explorar - Ver detalles al pasar el mouse por encima */
+  .btn:hover {
+  background-color: #555;
+  }
+
+
+  #contacto {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos esta línea para la sombra */
+  }
+  
+  /* Estilos del pie de página */
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregamos esta línea para la sombra */
+  } 
+
+  footer p {
+    margin: 0;
+    font-size: 14px; /* Ajusta el tamaño de fuente según tus preferencias */
+  }

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+    <link rel="stylesheet" href="design.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TECH & GADGETS</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <form action="/buscar" method="GET">
+    <input type="text" name="q" placeholder="Buscar...">
+    <button type="submit">Buscar</button>
+  </form>
+
+  <style>
+    /* Estilos adicionales */
+    .hidden-section {
+      display: none;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .fade-in.active {
+      opacity: 1;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      display: none;
+      cursor: pointer;
+    }
+  </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Captura el evento de clic en los enlaces con la clase "scroll-link"
+    var scrollLinks = document.querySelectorAll(".scroll-link");
+    scrollLinks.forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+        var target = this.getAttribute("href"); // Obtiene el destino del enlace
+
+        // Desplazamiento suave a la sección correspondiente
+        document.querySelector(target).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  });
+</script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Captura el evento de clic en los botones del menú
+        var menuItems = document.querySelectorAll("nav ul li a");
+        menuItems.forEach(function(item) {
+          item.addEventListener("click", function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+            // Obtener el botón "Ver detalles"
+            const btnVerDetalles = document.querySelector('.btn-ver-detalles');
+
+            // Agregar evento de clic al botón "Ver detalles"
+            btnVerDetalles.addEventListener('click', function() {
+            // Lógica para mostrar los detalles del producto
+            console.log('Mostrar detalles del producto');
+            });
+            
+            // Código JavaScript para manejar el evento de clic del botón
+            document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.querySelector('.btn');
+
+            btn.addEventListener('click', function(event) {
+            // Agrega aquí la acción que deseas que realice el botón al hacer clic
+            console.log('Haz hecho clic en el botón');
+           });
+         });
+            
+            // Muestra la sección correspondiente o carga la subpágina
+            if (target === "noticias.html") {
+              // Carga la subpágina y muestra su contenido
+              fetch(target)
+                .then(function(response) {
+                  return response.text();
+                })
+                .then(function(content) {
+                  var targetSection = document.querySelector("#content");
+                  targetSection.innerHTML = content;
+                });
+            } else {
+              // Muestra la sección correspondiente
+              var targetSection = document.querySelector(target);
+              targetSection.classList.remove("hidden-section");
+            }
+          });
+        });
+      });
+    </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio" class="scroll-link">Inicio</a></li>
+        <li><a href="#noticias" class="scroll-link">Noticias</a></li>
+        <li><a href="#reseñas" class="scroll-link">Reseñas</a></li>
+        <li><a href="#comparativas" class="scroll-link">Comparativas</a></li>
+        <li><a href="#contacto" class="scroll-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>TECH & GADGETS</h1>
+    <p><h2>Descubre las últimas novedades y reseñas de los mejores gadgets.</h2></p>
+    <a href="#explorar" class="btn"><h3>Explorar</h3></a>
+  </section>
+  
+  <section id="inicio">
+    <h2>Inicio</h2>
+    <p><h1>Bienvenido a TECH & GADGETS, tu fuente de información sobre las últimas novedades y reseñas de los mejores gadgets del mercado.</h1></p>
+    <p>Explora nuestras secciones de noticias, reseñas y comparativas para estar al día con las últimas tendencias en tecnología.</p>
+  </section>
+
+  <section id="noticias"> 
+    <!-- Contenido de la sección de noticias -->
+    <h2>Noticias</h2>
+    <article>
+      <h3>Apple lanza el nuevo iPhone 13</h3>
+      <p>Apple ha presentado su último modelo de smartphone, el iPhone 13, con mejoras en la cámara, rendimiento y duración de la batería.</p>
+    </article>
+    <article>
+      <h3>Samsung anuncia el lanzamiento de su nueva línea de televisores QLED</h3>
+      <p>Samsung ha revelado su nueva serie de televisores QLED con tecnología de última generación y pantallas de alta resolución.</p>
+    </article>
+  </section>
+
+  <section id="reseñas">
+    <!-- Contenido de la sección de reseñas -->
+    <h2>Reseñas</h2>
+    <article>
+      <h3>Reseña del dron Alien - WebCam</h3>
+      <p>El dron Alien - WebCam es una impresionante combinación de tecnología de dron y cámara web, ideal para capturar imágenes aéreas y transmitirlas en tiempo real.</p>
+    </article>
+    <article>
+      <h3>Análisis del reloj Ultimate - Watch</h3>
+      <p>El reloj Ultimate - Watch ofrece una amplia gama de funciones y un diseño elegante, convirtiéndolo en un accesorio imprescindible para los amantes de la tecnología.</p>
+    </article>
+  </section>
+
+  <section id="comparativas">
+    <!-- Contenido de la sección de comparativas -->
+    <h2>Comparativas</h2>
+    <article>
+      <h3>Comparativa de smartphones: iPhone 13 vs. Samsung Galaxy S21</h3>
+      <p>En esta comparativa, analizamos las características y el rendimiento del iPhone 13 y el Samsung Galaxy S21 para ayudarte a elegir el mejor smartphone para ti.</p>
+    </article>
+    <article>
+      <h3>Comparativa de laptops: Lenovo ThinkPad vs. Dell XPS</h3>
+      <p>Descubre las diferencias entre las laptops Lenovo ThinkPad y Dell XPS, desde el rendimiento y la duración de la batería
+  </section>
+
+  <section class="featured-products">
+    <div class="product">
+      <img src="R.jpg" alt="Producto 1">
+      <h3>DRON ALIEN - WEBCAM</h3>
+      <p>Ahora está disponible en Amazon por menos de lo que te imaginas,</p> 
+      <p>es la sensación de la tecnología actual.</p>
+      <a href="#" class="btn">Ver detalles</a>
+    </div>
+    <div class="product">
+      <img src="S.jpg" alt="Producto 2">
+      <h3>ULTIMATE - WATCH</h3>
+      <p>Descripción breve del producto.</p>
+      <a href="#" class="btn">Ver detalles</a>
+      <div class="product">
+        <img src="T.jpg" alt="Producto 3">
+        <h3>LENOVO - THINKPHONE</h3>
+        <p>Descripción breve del producto.</p>
+        <a href="#" class="btn">Ver detalles</a>
+      </div>
+      <div class="product">
+        <img src="C.jpg" alt="Producto 4">
+        <h3>KNIFE - TECH</h3>
+        <p>Descripción breve del producto.</p>
+        <a href="#" class="btn">Ver detalles</a>
+      </div>
+    </div>
+    <!-- Repite el código HTML anterior para más productos destacados -->
+  </section>
+
+  <section id="contacto">
+    <a href="#" class="btn">Volver al Inicio</a>
+    <!-- Contenido de la sección de contacto -->
+    <p>Si tienes alguna pregunta o consulta, no dudes en contactarnos. 
+      Puedes utilizar el siguiente formulario o enviarnos un correo electrónico a info@tech&g.net.</p>
+    <p>¡Disfruta de la experiencia tecnológica con TECH & GADGETS!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 TECH & GADGETS. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
